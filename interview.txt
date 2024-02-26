@@ -1,0 +1,146 @@
+Q: O, omega and theta
+a: O- worst,
+   omega- best
+   theta- average
+Q: Why is java platform indipendent?
+a: jvm and byte cioe
+
+Q: What is bytecode?
+a: 20%-high lvl lang
+   80%-machine lang
+
+Q: Type of variables
+a: local,instance, class
+
+Q: Scope
+a: code in between the braces.
+
+Q: Instance var
+a: inside class but outside variable. Scope same as object of class.
+
+Q: Static variable
+a: 
+
+Q: Boolean
+a: bit 0 and bit 1 and not 0 and 1.
+
+Q: Why do variables in java have limits?
+a: to save space.
+
+byte, 8 bits, 1 byte, range -2^7 to 2^(7-1)
+short, 16 bits, 2 byte, range -2^15 to 2^(15-1)
+char, 16 bits, 2 byte
+int,  32 bits, 4 byte, range -2^31 to 2^(31-1)
+long, 64 bits, 8 byte, range -2^63 to 2^(63-1)
+float, 32 bits, 4 byte
+double, 32 bits, 8 byte
+
+Q: Labelled break
+a: x:
+   for(int i=0;i<10;i++){
+	for(int j=0;j<i;j++){
+		if(j==3){
+		    break x:
+	}
+	}
+	}
+    labelled break breaks the one labelled. in ths case the 1st loop.
+
+Q: 2d array declaration
+a: int 2d[]array[];
+   this is also valid
+
+Q: is array.length a property of array or function
+a: it is a property
+
+Q: is string.length() a property of array or function
+a: it is a function.
+
+Q: abstract data type
+a: collections for the most part.
+
+Q: method and func(not in java)
+a: method needs a '.' operator
+   func doesn't need that
+
+Q: method and func(in java)
+a: since everything is class in java we always need '.' operator for both.
+
+Q: bitwise & operator.
+a: in a&&b if a is false it doesn't check for b
+   in a&b if a is false it still checks for b
+	(same for | and ||)
+
+Q: procedural programming
+a: no steps can be skipped in a process.
+
+Q: procedural programming vs oops
+a: in oops you can devide the problem into smaller problem bt you have to take the problem as a whole in pp.
+
+Q: what are classes?
+a: classes are blueprint of an object.
+   does not acquire space in memory.(the size of the file is due to the text)
+
+Q: what are object?
+a: real life entity, physical entity, instance of a class.
+   implementation of blueprint.
+
+Q: in what order is memory allocated.
+a: 1.static as soon as created  because they are related to class.
+   2.instance(object)
+   3.local(function)
+
+com-root folder
+
+Q: Inner class
+a: nested class
+
+Q: anonymous class
+a: class wtih no name. can be created inside or as an inner class.
+
+Q: can class be prIvate?
+a: no because we wont be able to create objects. it can only be public or default.
+
+Q: What should be the accessibilty modifier for instance variable?
+a: instance variable should be private because no one else should be able to access it
+
+**To study definations
+  1. encapsulation- wrapping up data in a single unit. 
+                    eg- classes. 
+                    reason-security.
+          getter and setter method:
+                    getter and setter methods come under encapsulation and they are usually public bt never private
+                    since we use private for instance var we cant access it from other classes so we use getter and setter method to access them.
+                    getter method provides any other class a readable access
+                    setter method provides any other class a writable access
+
+  2. data hiding- hiding data from specific group of people and or giving access to them.
+                  done using access modifiers like public, private, default or protected by using packages.
+
+          inside same class        inside same package          inside different package/outside same package       inside diff package using subclass
+public           yes                       yes                            yes                                                      yes
+private          yes                       no                             no                                                       no
+default          yes                       yes                            no                                                       no
+protected        yes                       yes                            no                                                       yes
+
+  3. abstraction- hiding unnecessary details from customer
+
+Graph:
+V-vertices
+E-edges
+adjecncy matrix:
+max edges:
+undirected: 0<=e<=(V*(v-1))/2
+directed: 0<=e<=(V*(v-1))
+adjecncy list:
+implimentation:
+1. dynacmic sized array(we mostly use this.)( cache friendly & simple implimentation)(dis- space waisted as adds extra space, add may take theta(n) as we may need to copy array as more space maybe req.)adding time comm-theta(1)
+2. linked list
+space:
+undirected:O(V+2E)
+directed:O(V+E)
+arraylist of arraylist is cache friendly
+
+Type of graphs:
+edges less than (max edges)-sparse graph, most realworld ones are this type.
+edges close to (max edges)-dense graph
